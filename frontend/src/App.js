@@ -1,23 +1,39 @@
-import logo from './logo.svg';
+import React, { useState } from 'react';
+
+
 import './App.css';
 
 function App() {
+  const [inputData, setInputData] = useState('');
+
+  const handleSubmit = async () => {
+    const data = { data: inputData }; // The data you're sending
+
+
+    const response = await fetch('http://localhost:5000/predict', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify(data),
+    });
+
+    const result = await response.json();
+    console.log(result); // The prediction response from the backend
+  };
+
+  // HTML for the actual web page
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <div>
+      <input 
+        type="text" 
+        value={inputData} 
+        onChange={(e) => setInputData(e.target.value)} 
+        placeholder="Enter data" 
+      />
+      <button onClick={handleSubmit}>Send to Backend</button>
+    </div>
     </div>
   );
 }
