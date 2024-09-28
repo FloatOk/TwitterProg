@@ -32,7 +32,7 @@ function App() {
         onChange={(e) => setInputData(e.target.value)} 
         placeholder="Enter data" 
       />
-      <button onClick={handleSubmit}>Send to Backend</button>
+      <button onClick={handleSubmit}>Search Twitter User</button>
     </div>
     </div>
   );
