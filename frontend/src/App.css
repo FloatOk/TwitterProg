@@ -1,38 +1,133 @@
-.App {
+App.css
+
+.body {
+  background-image: linear-gradient(#829cd1, black);
+  height: 110vh;
+  width: 100%;
+  border-bottom: solid 10vh black;
+}
+
+
+button {
+  width: 19.43vw;
+  height: 7vh;
+  position: relative;
+  left: 19.5vw;
+  font-family: 'Franklin Gothic Medium', sans-serif;
+  top: 20vh;
+  background-color: black;
+  border: black;
+  font-size: 4vh;
+  text-decoration:double;
+  font-weight: bolder;
+  color: white;
+  border-radius: 1vw;
+}
+
+.parent {
+  margin: 1rem;
+  padding: 2rem 2rem;
   text-align: center;
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.child {
+  display: inline-block;
+  border: 1px solid white;
+  padding: 1rem 1rem;
+  vertical-align: middle;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+
+bb {
+  width: 19.43vw;
+  height: 30;
+  position: relative;
+  left: 0px;
+  transform:translateX(-50%);
+  font-family: 'Franklin Gothic Medium', sans-serif;
+  top: 165px;
+  animation-name: result_fade_inout;
+  animation-duration: 2.5s;
+  font-size:8dvh;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+input {
+  border-style: hidden;
+  border-radius: 25px;
+  font-size: 4vh;
+  position: relative;
+  left: 39vw;
+  width: 19vw;
+  height: 6vh;
+  top: 10vh;
+  text-align: center;
+
 }
 
-.App-link {
-  color: #61dafb;
+p {
+  position: absolute;
+  max-width: 100%; 
+  height: auto;
+  width: auto\9;    
+  left: -620px;
+  bottom: 225px; 
+  animation-name: x;
+  animation-duration: 3.5s;
+  animation-fill-mode: forwards;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+h1 {
+  position: absolute;
+  color: black;
+  top: 100vh; /* Adjust this if it's off-screen */
+  font-size: larger;
+  left: 4vw;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  z-index: 10; /* Ensure it appears above other elements */
+}
+
+b1{
+  position:absolute;
+  top: 105vh;
+  left: 4vw;
+  font-size: large;
+  color: black;
+  opacity: 1;
+}
+
+
+.rectangle{
+  position: absolute;
+  left:  282.5px;
+  bottom: 247.2px;
+  width: 60px;
+  height: 518.9px;
+
+  transform: rotate(143deg);
+  animation-name: loading;
+  animation-duration: 20s;
+  animation-delay: 0.5s;
+  animation-fill-mode: forwards;
+}
+@keyframes result_fade_inout {
+  0%{opacity: 0;}
+  33%{opacity: 0.33;}
+  67%{opacity: 0.67;}
+  100%{opacity: 1;}
+}
+
+@keyframes x {
+  0%{left:-500}
+  25% {left:-400px;}
+  50%{left:-250}
+  75%{left:-50}
+  100%{transform: translateX(695px);}
+
+}
+@keyframes loading{
+  0%{background-color: #829cd1;opacity: 0;}
+  20%{background-color: white;opacity: 0.25;}
+  40%{background-color: white;opacity: 0.75;}
+  60%{background-color: white;opacity: 0.25;}
+  80%{background-color: white; opacity: 0.75;}
+  100%{background-color: white;opacity: 0.25; opacity: 0;}
 }
