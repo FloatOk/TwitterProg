@@ -31,7 +31,6 @@ button {
 }
 .child {
   display: inline-block;
-  border: 1px solid white;
   padding: 1rem 1rem;
   vertical-align: middle;
 }
@@ -101,7 +100,7 @@ b1{
   bottom: 247.2px;
   width: 60px;
   height: 518.9px;
-
+  background: white;
   transform: rotate(143deg);
   animation-name: loading;
   animation-duration: 20s;

@@ -16,7 +16,7 @@ function App() {
   const [resultData, setResultData] = useState(null);
 
   document.body.style = 'background-image: linear-gradient(#829cd1, black)';
-  document.body.style.minHeight = '100vh';
+  document.body.style.minHeight = '110vh';
   const handleSubmit = async () => {
     const data = { data: inputData }; // The data you're sending
 
