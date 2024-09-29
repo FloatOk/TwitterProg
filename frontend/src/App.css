@@ -77,7 +77,7 @@ p {
 h1 {
   position: absolute;
   color: black;
-  top: 100vh; /* Adjust this if it's off-screen */
+  top: 115vh; /* Adjust this if it's off-screen */
   font-size: larger;
   left: 4vw;
   font-family: Georgia, 'Times New Roman', Times, serif;
@@ -86,7 +86,7 @@ h1 {
 
 b1{
   position:absolute;
-  top: 105vh;
+  top: 120vh;
   left: 4vw;
   font-size: large;
   color: black;
